@@ -3,13 +3,13 @@
 const axios = require('axios');
 
 
-const getTransactions = async (userId) =>{
+const getTransactions = async (addressId) =>{
 	const instance = axios.create({
 		baseURL : 'https://api.etherscan.io/api',
 		params : {
         	module : 'account',
         	action : 'txlist',
-        	address : userId,
+        	address : addressId,
         	startblock : 0,
         	endblock: 99999999,
         	page : 1,
@@ -34,7 +34,7 @@ const getTransactions = async (userId) =>{
 	} )
 
 	const transactionData =  {
-		addressId : userId,
+		addressId : addressId,
 		transactions
 	};
 

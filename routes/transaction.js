@@ -5,7 +5,7 @@ const {getNormalTransactions} = require('../controllers/transaction');
 
 const router = express.Router();
 
-router.route('/:userId')
+router.route('/')
 	.get(getNormalTransactions);
 
 module.exports = router;

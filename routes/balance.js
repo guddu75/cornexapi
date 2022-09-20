@@ -5,6 +5,6 @@ const {getBalance} = require('../controllers/balance');
 
 const router = express.Router();
 
-router.route('/:userId').get(getBalance);
+router.route('/').get(getBalance);
 
 module.exports = router;

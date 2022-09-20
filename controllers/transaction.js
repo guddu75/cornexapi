@@ -8,11 +8,11 @@ const Transaction = require('../model/transaction');
 // @access Public
 exports.getNormalTransactions = async (req,res,next) => {
 
-	const userId = req.params.userId;
+	const addressId = req.query.addressId;
 	try {
-    	const response = await getTransactions(userId);
-		await Transaction.updateOne({addressId : userId} , response , {upsert : true});
-		const user = await Transaction.findOne({addressId : userId});
+    	const response = await getTransactions(addressId);
+		await Transaction.updateOne({addressId : addressId} , response , {upsert : true});
+		const user = await Transaction.findOne({addressId : addressId});
     	res.json(user);
   	} catch (error) {
     	console.error(error);
