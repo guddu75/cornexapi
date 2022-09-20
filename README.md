@@ -1,6 +1,6 @@
 # cornexapi
 This api is based on etherscan api
-## Transactions
+## TASK1 Transactions
 This endpoint responses with all the the normal ethereum transaction \
 query parameter : addressId
 ```
@@ -29,23 +29,7 @@ Response
 ```
 Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/transaction?addressId=0x62ea94320aa06DdaB6587825d179D1C1B70868B7).
 
-## Balance
-This GET API responses with current balance in ETH and current INR value of that balance . \
-query parameter : addressId
-
-```
-https://cornexapi.herokuapp.com/api/v1/balance?addressId=0x62ea94320aa06DdaB6587825d179D1C1B70868B7 
-```
-Response
-```json
-{
-	"balance":0.65232274,  // current value in ETH
-	"INRValue":70477.60115234001  // INR value of balance
-}
-```
-Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/balance?addressId=0x62ea94320aa06DdaB6587825d179D1C1B70868B7).
-
-## Price
+## TASK2 Price
 This endpoint responses with current value of 1 ETH in Indian rupees INR . \
 The price gets updated every 10 minutes
 ```
@@ -62,3 +46,21 @@ Response
 }
 ```
 Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/price ).
+
+## TASK3 Balance
+This GET API responses with current balance in ETH and current INR value of that balance . \
+query parameter : addressId
+
+```
+https://cornexapi.herokuapp.com/api/v1/balance?addressId=0x62ea94320aa06DdaB6587825d179D1C1B70868B7 
+```
+Response
+```json
+{
+	"balance":0.65232274,  // current value in ETH
+	"INRValue":70477.60115234001  // INR value of balance
+}
+```
+Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/balance?addressId=0x62ea94320aa06DdaB6587825d179D1C1B70868B7).
+
+
