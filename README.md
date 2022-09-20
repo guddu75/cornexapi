@@ -30,7 +30,7 @@ Response
 Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/transaction?addressId=0x62ea94320aa06DdaB6587825d179D1C1B70868B7).
 
 ## Balance
-This GET endpoint responses with current balance in ETH and current INR value of that balance . \
+This GET API responses with current balance in ETH and current INR value of that balance . \
 query parameter : addressId
 
 ```

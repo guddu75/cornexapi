@@ -1,7 +1,6 @@
 
 const getTransactions = require('../utils/transactionAPI');
 const getPrice = require('../utils/priceAPI'); 
-const calculateBalance = require('../utils/calculateBalance');
 const Price = require('../model/price');
 
 // @desc Get Balance  
