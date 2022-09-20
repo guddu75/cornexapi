@@ -1,25 +1,27 @@
 const express = require('express');
-
 const dotenv = require('dotenv');
-
 const connectDB = require('./config/db');
+
 
 dotenv.config({path : `config/config.env`});
 
 
-
+// Importing routes
 const transaction = require('./routes/transaction');
 const price = require('./routes/price');
 const balance = require('./routes/balance');
+
+
 const liveExchange = require('./utils/liveexchangeRate');
 
-
+//  connection to mongoDb atlas cluster
 connectDB();
 
+//  initialising the express app
 const app = express();
 
+// get the updated ETH to INR value every 10 minutes 
 liveExchange();
-
 
 
 app.use('/api/v1/transaction',transaction);

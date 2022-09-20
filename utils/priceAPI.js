@@ -2,6 +2,7 @@
 const axios = require('axios');
 
 
+// Fetches the price of 1 ETH 
 const getPrice = async () =>{
 	const instance = axios.create({
 		baseURL : 'https://api.coingecko.com/api/v3/simple/price',
@@ -13,8 +14,6 @@ const getPrice = async () =>{
 	const response = await instance.get();
 
 	const data = await response.data;
-
-	// await console.log(data.ethereum.inr);
 
 	const obj = await {
 		inrValue : data.ethereum.inr

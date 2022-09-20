@@ -2,7 +2,8 @@
 
 const axios = require('axios');
 
-
+//  Fethces all the "Normal" transactions of a addressId
+// Format the response because we only need "from" , "to" , "value" , "adressId" field for calculation
 const getTransactions = async (addressId) =>{
 	const instance = axios.create({
 		baseURL : 'https://api.etherscan.io/api',
@@ -18,12 +19,15 @@ const getTransactions = async (addressId) =>{
         	apikey : process.env.API_KEY
     	}
 	});
+
+	// get the response from the data
 	const response = await instance.get();
 
 	const data = response.data;
 
 	let transactions = [];
 
+	// formatting the data
 	data.result.forEach( (tr) => {
 		const obj = {
 			from : tr.from,
@@ -37,9 +41,6 @@ const getTransactions = async (addressId) =>{
 		addressId : addressId,
 		transactions
 	};
-
-	
-	
 	return transactionData;
 }
 

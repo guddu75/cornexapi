@@ -4,12 +4,19 @@ const getPrice = require('../utils/priceAPI');
 const calculateBalance = require('../utils/calculateBalance');
 const Price = require('../model/price');
 
+// @desc Get Balance  
+// @route GET /api/v1/Balance?addressId=id
+// @access Public
+
 exports.getBalance = async(req,res,next) =>{
 	const addressId = req.query.addressId;
+	// get the current price of 1 ETH from database
 	const price = await Price.findOne();
 	const inrValue = price.inrValue;
+	// fetch transactions of addressId
 	const transactionData = await getTransactions(addressId);
 	const transactions = await transactionData.transactions;
+	// calculate the balance
 	let balance = 0;
 	transactions.forEach( (transaction) => {
 		if(transaction.from.toLowerCase() === addressId.toLowerCase()){
