@@ -44,3 +44,21 @@ Response
 }
 ```
 Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/balance?addressId=0x62ea94320aa06DdaB6587825d179D1C1B70868B7).
+
+## Price
+This endpoint responses with current value of 1 ETH in Indian rupees INR . \
+The price gets updated every 10 minutes
+```
+https://cornexapi.herokuapp.com/api/v1/price 
+```
+Response
+```json
+{	
+	"inrValue":107293, // current value of 1 ETH
+	"_id":"632a2702bfa2b1f5da0e4dc4",
+	"createdAt":"2022-09-20T20:48:02.368Z",
+	"updatedAt":"2022-09-20T20:48:02.368Z",
+	"__v":0
+}
+```
+Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/price ).
