@@ -19,9 +19,9 @@ exports.getBalance = async(req,res,next) =>{
 	let balance = 0;
 	transactions.forEach( (transaction) => {
 		if(transaction.from.toLowerCase() === addressId.toLowerCase()){
-			balance = balance - (parseInt(transaction.value)/1000000000000000000);
-		}else if(transaction.to.toLowerCase() === addressId.toLowerCase()){
 			balance = balance + (parseInt(transaction.value)/1000000000000000000);
+		}else if(transaction.to.toLowerCase() === addressId.toLowerCase()){
+			balance = balance - (parseInt(transaction.value)/1000000000000000000);
 		}
 	});
 	res.json({
