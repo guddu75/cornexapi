@@ -29,6 +29,8 @@ Response
 ```
 Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/transaction?addressId=0x62ea94320aa06DdaB6587825d179D1C1B70868B7).
 
+[Link to the logic](https://github.com/guddu75/cornexapi/blob/master/controllers/transaction.js)
+
 ## TASK2 Price
 This endpoint responses with current value of 1 ETH in Indian rupees INR . \
 The price gets updated every 10 minutes
@@ -47,6 +49,8 @@ Response
 ```
 Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/price ).
 
+[Link to the logic](https://github.com/guddu75/cornexapi/blob/master/utils/liveexchangeRate.js)
+
 ## TASK3 Balance
 This GET API responses with current balance in ETH and current INR value of that balance . \
 query parameter : addressId
@@ -62,5 +66,7 @@ Response
 }
 ```
 Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/balance?addressId=0x62ea94320aa06DdaB6587825d179D1C1B70868B7).
+
+[Link to the logic](https://github.com/guddu75/cornexapi/blob/master/controllers/balance.js)
 
 
