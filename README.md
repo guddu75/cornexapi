@@ -60,9 +60,9 @@ https://cornexapi.herokuapp.com/api/v1/balance?addressId=0x62ea94320aa06DdaB6587
 ```
 Response
 ```json
-{
-	"balance":0.65232274,  // current value in ETH
-	"INRValue":70477.60115234001  // INR value of balance
+{	
+	"balance":-0.001322739999999989, // current balance in ETH
+	"INRValue":-133.1761086799989 // INR value of BALANCE
 }
 ```
 Try this [endpoint](https://cornexapi.herokuapp.com/api/v1/balance?addressId=0x62ea94320aa06DdaB6587825d179D1C1B70868B7).
